@@ -1,5 +1,3 @@
-import React from "react";
-
 function Alert(props) {
   const caps = (word) => {
     const lower = word.toLowerCase();

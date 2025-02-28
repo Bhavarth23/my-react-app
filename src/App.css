@@ -1,47 +1,152 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* -------- General Styling -------- */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* -------- Light Mode -------- */
+body.light-mode {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #1e2a38; /* Dark navy text */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* -------- Dark Mode -------- */
+body.dark-mode {
+  background-color: #042743; /* Dark navy blue */
+  color: #d1d1d1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* -------- Navbar Styling -------- */
+.navbar {
+  padding: 14px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  padding: 2em;
+/* Light Mode Navbar */
+.light-mode .navbar {
+  background-color: #f1f3f5; /* Light Gray */
 }
 
-.read-the-docs {
-  color: #888;
+.light-mode .navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e2a38 !important; /* Dark navy */
 }
 
-.blank {
-  color: blue;
+.light-mode .navbar-nav .nav-link {
+  color: #1e2a38 !important;
+  font-size: 1.1rem;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
 }
-*/
+
+.light-mode .navbar-nav .nav-link:hover {
+  color: #4a90e2; /* Modern blue hover */
+}
+
+/* Dark Mode Navbar */
+.dark-mode .navbar {
+  background-color: #1e2a38;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .navbar-nav .nav-link {
+  color: #d1d1d1 !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  color: #4a90e2;
+}
+
+/* -------- Alert Styling -------- */
+.alert {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Light Mode Alerts */
+.light-mode .alert {
+  background-color: #dff0d8;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+/* Dark Mode Alerts */
+.dark-mode .alert {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-left: 4px solid #4a90e2;
+}
+
+/* -------- TextForm Styling -------- */
+.text-form-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.text-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.text-form-container textarea {
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+
+.text-form-container textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Light Mode Buttons */
+.light-mode .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.light-mode .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Buttons */
+.dark-mode .btn-primary {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #357abd;
+}
+
+/* -------- Toggle Switch -------- */
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 5px;
+}
